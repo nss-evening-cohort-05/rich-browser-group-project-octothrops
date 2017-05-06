@@ -58,6 +58,45 @@ $('register-button').click(() => {
 	});
 });
 
+$("#login-logout-link").click(() => {
+	let email = $('#input-email').val();
+	let password = $('#input-password').val();
+	// firebase.loginUser(user).then((response) => {
+		clearLogin();
+		$(".search-container").addClass('hide');
+		$("#search-movies-link").removeClass('active');
+		$("#login-container").removeClass("hide");
+		$("#login-logout-link").addClass('active');
+
+		// $('main-container').removeClass('hide');
+		
+		// firebase.createLogoutButton(apiKeys);
+
+	// }).catch((error) => {
+	// 	console.log("error in loginUser", error);
+	// });
+});
+
+
+
+$("#search-movies-link").click(() => {
+	let email = $('#input-email').val();
+	let password = $('#input-password').val();
+	// firebase.loginUser(user).then((response) => {
+		clearLogin();
+		$("#login-container").addClass('hide');
+		$("#login-logout-link").removeClass('active');
+
+		// $('main-container').removeClass('hide');
+		
+		$(".search-container").removeClass("hide");
+		$("#search-movies-link").addClass('active');
+		// firebase.createLogoutButton(apiKeys);
+
+	// }).catch((error) => {
+	// 	console.log("error in loginUser", error);
+	// });
+});
 
 $('#login-button').click(() => {
 
