@@ -28,7 +28,8 @@ var FbAPI = ((oldFirebase) => {
     return firebase.auth().currentUser;
   };
 
-  oldFirebase.logoutUser = (email, password) => {
+  oldFirebase.logoutUser = () => {
+  // oldFirebase.logoutUser = (email, password) => {
      firebase.auth().signOut();
   };
 

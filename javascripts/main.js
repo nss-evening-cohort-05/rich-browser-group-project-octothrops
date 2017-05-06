@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 let apiKeys; // firebase credentials
 
+let loggedIn = false;
+
 FbAPI.firebaseCredentials().then((keys) => {
 	apiKeys = keys;
 	// gets the apiKeys.json object
@@ -29,7 +31,7 @@ FbAPI.firebaseCredentials().then((keys) => {
 
 // id in navbar :: .search-container
 
-$('register-button').click(() => {
+$('#register-button').click(() => {
 
 	let email = $('#input-email').val();
 	let password = $('#input-password').val();
@@ -37,13 +39,13 @@ $('register-button').click(() => {
 
 	let user = {email, password}; 
 
-	firebase.registerUser(user).then((response) => {
+	FbAPI.registerUser(user).then((response) => {
 		console.log("register response", response);
 		let newUser = {
 			uid: response.uid
 		};
-
-		firebase.addUser(apiKeys, newUser).then((response) => {
+console.log("newUser :: ", newUser);
+		FbAPI.addUser(apiKeys, newUser).then((response) => {
 			clearLogin();
 			$('#login-container').addClass('hide');
 
@@ -106,13 +108,15 @@ $('#login-button').click(() => {
 
 	let user = {email, password};
 
-	firebase.loginUser(user).then((response) => {
+	FbAPI.loginUser(user).then((response) => {
 		clearLogin();
 		$('#login-container').addClass('hide');
 		// $('main-container').removeClass('hide');
 		
 		$(".search-container").removeClass("hide");
 		// firebase.createLogoutButton(apiKeys);
+
+		loggedIn = true;
 
 	}).catch((error) => {
 		console.log("error in loginUser", error);
@@ -126,5 +130,21 @@ let clearLogin = () => {
 	$('#input-password').val("");
 	// $('#input-username').val("");
 };
+
+
+// event handler for <Login-Register-Logout> link
+$('#login-logout-link').click(() => {
+
+	if (!loggedIn) {
+		// then need to register and/or log in
+	} else {
+		clearLogin();
+		FbAPI.logoutUser();	
+		$(".search-container").addClass("hide");
+		$('#login-container').removeClass('hide');
+	}
+});
+
+
 
 });
