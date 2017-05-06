@@ -24,25 +24,35 @@
         <a class="navbar-brand" href="#">Movie History</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Find New Movies</a></li>
-          <li class="active"><a href="#">Search Your Movies</a></li>
+          <li id="find-movies-link"><a href="#">Find New Movies</a></li>
+          <li id="search-movies-link"><a href="#">Search Your Movies</a></li>
         </ul>
       
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Login / Register / Logout</a></li>
+          <li id="login-logout-link" class="active"><a href="#">Login / Register / Logout</a></li>
         </ul>
     </div>
   </nav>
 
-  <div class="input-holder input-group col-xs-4 col-xs-offset-4">
-    <input type="text" class="form-control" placeholder="Search Movie" id="movieSearch">
+  <div class="search-container hide">
+    <div class="input-holder input-group col-xs-4 col-xs-offset-4">
+      <input type="text" class="form-control" placeholder="Search Movie" id="movieSearch">
+    </div>
+
+    <div class="row col-xs-4 col-xs-offset-4">
+      <button class="btn btn-info btn-lg col-xs-12" id="getMovie">Get Movie</button>
+    </div>
   </div>
 
-  <div class="row col-xs-4 col-xs-offset-4">
-    <button class="btn btn-info btn-lg col-xs-12" id="getMovie">Get Movie</button>
+  <div class="container col-xs-4 col-xs-offset-4" id="login-container">
+    <h3 class="text-center form-spacing">Movie History</h3>
+    <input type="email" id="input-email" class="form-control form-spacing" placeholder="Email Address" required autofocus>
+    <input type="password" id="input-password" class="form-control form-spacing" placeholder="Password" required>
+    <input type="text" id="input-username" class="form-control form-spacing" placeholder="Username" required>
+    <button class="btn btn-lg btn-success col-xs-6" id="login-button">Login</button>  
+    <button class="btn btn-lg btn-primary col-xs-6" id="register-button">Register</button>    
   </div>
 
 
