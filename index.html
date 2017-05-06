@@ -11,11 +11,48 @@
 </head>
 
 <body>
-  <div class="row input-holder">
-    <input type="text" class="col-xs-4 col-xs-offset-4" id="movieSearch">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Movie History</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li id="find-movies-link"><a href="#">Find New Movies</a></li>
+          <li id="search-movies-link"><a href="#">Search Your Movies</a></li>
+        </ul>
+      
+        <ul class="nav navbar-nav navbar-right">
+          <li id="login-logout-link" class="active"><a href="#">Login / Register / Logout</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="search-container hide">
+    <div class="input-holder input-group col-xs-4 col-xs-offset-4">
+      <input type="text" class="form-control" placeholder="Search Movie" id="movieSearch">
+    </div>
+
+    <div class="row col-xs-4 col-xs-offset-4">
+      <button class="btn btn-info btn-lg col-xs-12" id="getMovie">Get Movie</button>
+    </div>
   </div>
-  <div class="row col-xs-4 col-xs-offset-4">
-    <button class="btn btn-danger btn-lg col-xs-12" id="getMovie">Get Movie</button>
+
+  <div class="container col-xs-4 col-xs-offset-4" id="login-container">
+    <h3 class="text-center form-spacing">Movie History</h3>
+    <input type="email" id="input-email" class="form-control form-spacing" placeholder="Email Address" required autofocus>
+    <input type="password" id="input-password" class="form-control form-spacing" placeholder="Password" required>
+    <input type="text" id="input-username" class="form-control form-spacing" placeholder="Username" required>
+    <button class="btn btn-lg btn-success col-xs-6" id="login-button">Login</button>  
+    <button class="btn btn-lg btn-primary col-xs-6" id="register-button">Register</button>    
   </div>
 
 

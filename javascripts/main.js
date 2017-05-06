@@ -25,6 +25,7 @@ firebase.firebaseCredentials().then((keys) => {
   });
 
 
+
 // id in navbar :: .search-container
 
 $('register-button').click(() => {
@@ -86,6 +87,5 @@ let clearLogin = () => {
 	$('#input-password').val("");
 	// $('#input-username').val("");
 };
-
 
 });

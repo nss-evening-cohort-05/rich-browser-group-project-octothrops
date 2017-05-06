@@ -5,10 +5,11 @@ body {
 }
 
 
-.input-holder{
-	input{
-		margin-top: 20px;
-		margin-bottom: 20px;
-		background-color: $yellow;
+.input-holder {
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	input {
+		background-color: $lightyellow;
 	}
 }
