@@ -2,10 +2,11 @@ $(document).ready(function() {
 
 let apiKeys; // firebase credentials
 
-firebase.firebaseCredentials().then((keys) => {
+FbAPI.firebaseCredentials().then((keys) => {
 	apiKeys = keys;
 	// gets the apiKeys.json object
 	// hat has the firebase API key et al
+console.log("apiKeys :: ", apiKeys);
 	firebase.initializeApp(apiKeys);
 
 	// FbAPI.writeCurrent(apiKeys);
@@ -43,9 +44,8 @@ $('register-button').click(() => {
 		};
 
 		firebase.addUser(apiKeys, newUser).then((response) => {
-			// clearLogin();
+			clearLogin();
 			$('#login-container').addClass('hide');
-			// $('main-container').removeClass('hide');
 
 			$(".search-container").removeClass("hide");
 			// firebase.createLogoutButton(apiKeys);
