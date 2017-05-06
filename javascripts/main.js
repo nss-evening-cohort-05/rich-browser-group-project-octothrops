@@ -10,5 +10,27 @@ $(document).ready(function() {
   });
 
 
+  $("#LoginBtn").click((e)=>{
+  	$("#login-container").addClass("hide");
+  	$("#btnLogout").removeClass("hide");
+  	$(".row").removeClass("hide");
+
+
+
+
+
+  });
+
+
+  $("#RegisterBtn").click((e)=>{
+  	$("#login-container").addClass("hide");
+  	$("#btnLogout").removeClass("hide");
+  	$(".row").removeClass("hide");
+
+
+
+
+
+  });
 
 });
