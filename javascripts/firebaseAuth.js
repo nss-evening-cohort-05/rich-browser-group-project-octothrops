@@ -34,4 +34,4 @@ var movieAPI = ((oldFirebase) => {
 
   return oldFirebase;
 
-})(movieAPI || {});
+})(FbAPI || {});
