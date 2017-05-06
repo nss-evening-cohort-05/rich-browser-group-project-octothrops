@@ -1,5 +1,5 @@
 
-var firebase = ((oldFirebase) => {
+var FbAPI = ((oldFirebase) => {
 
 	oldFirebase.addUser = (keys, newUser) => {
 		return new Promise ((resolve, reject) => {

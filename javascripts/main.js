@@ -6,7 +6,7 @@ FbAPI.firebaseCredentials().then((keys) => {
 	apiKeys = keys;
 	// gets the apiKeys.json object
 	// hat has the firebase API key et al
-console.log("apiKeys :: ", apiKeys);
+	
 	firebase.initializeApp(apiKeys);
 
 	// FbAPI.writeCurrent(apiKeys);

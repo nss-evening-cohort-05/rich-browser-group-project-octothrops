@@ -12,7 +12,7 @@ var FbAPI = (() => {
 				$.ajax("apiKeys.json")
 				.done((data) => {
 					resolve(data);
-console.log("data from main iife :: ", data);
+// console.log("data from main iife :: ", data);
 				})
 			
 				.fail((error) => {

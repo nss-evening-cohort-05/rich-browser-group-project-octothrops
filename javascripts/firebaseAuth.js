@@ -1,4 +1,4 @@
-var movieAPI = ((oldFirebase) => {
+var FbAPI = ((oldFirebase) => {
 
   oldFirebase.registerUser = (credentials) => {
     return new Promise((resolve, reject) => {
