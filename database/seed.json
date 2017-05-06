@@ -1,0 +1,19 @@
+{
+  "movies" : {
+    "movie0" : {
+      "watchedMovie" : true,
+      "Title" : "Back to the Future",
+      "Rated" : "PG"
+    },
+    "movie1" : {
+      "watchedMovie" : true,
+      "Title" : "School of Rock",
+      "Rated" : "PG-13"
+    },
+    "movie2" : {
+      "watchedMovie" : false,
+      "Title" : "Clerks",
+      "Rated" : "R"
+    }
+  }
+}
