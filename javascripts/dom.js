@@ -10,7 +10,6 @@ var FbAPI = ((domStuff) => {
         	// only returns one object.  No need to loop.
             //searchedMovie.forEach((movie) => {
 
-                console.log("movie", movie)
             searchedMovieString += `<div class="col-md-4">`;
             searchedMovieString += `<div class="panel panel-default">`;
             searchedMovieString += `<div class="panel-heading">`;

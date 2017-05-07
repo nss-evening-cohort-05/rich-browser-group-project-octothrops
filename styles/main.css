@@ -6,3 +6,6 @@ body {
   margin-bottom: 20px; }
   .input-holder input {
     background-color: #ffffd3; }
+
+.searched-movie-container {
+  margin-top: 80px; }
