@@ -9,3 +9,6 @@ body {
 
 .searched-movie-container {
   margin-top: 80px; }
+
+.searched-movie-container ul {
+  list-style-type: none; }
