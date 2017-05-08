@@ -1,6 +1,6 @@
 var FbAPI = ((domStuff) => {
 
-	  	domStuff.writeSearchedMovieToDom = (movie) => {
+	  	domStuff.writeSearchedMovieToDom = (apiKeys, uid, movie) => {
             // This function runs when the button is clicked.  Results are passed in to writeSearchedMovieToDom
         	// FbAPI.getMovie(apiKeys).then((results) => { 
           	// Not needed.  movie.key is pulling the correct info below. 
@@ -41,11 +41,14 @@ var FbAPI = ((domStuff) => {
 
             searchedMovieString += `<div class="form-check">`;
             searchedMovieString += `<label class="form-check-label">`;
-let watchedMovie; // getWatched()
+
+
+let thisUser = (FbAPI.getUser(apiKeys, uid)); 
+let watchedMovie = thisUser.watchedMovie; // getWatched()
 // GET from firebase record, if user has watched movie
 // POST to firebase record if user posts a change here
-watchedMovie = true;
-// console.log("movie.watchedMovie :: ", `${movie.watchedMovie}`);
+// watchedMovie = true;
+console.log("watchedMovie :: ", watchedMovie);
             if (watchedMovie) {
                 searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked> Seen it!</label>`;
             } else {

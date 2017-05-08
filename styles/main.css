@@ -4,6 +4,9 @@ body {
   font: 100% "PT Sans", sans-serif;
   color: slategray; }
 
+.navbar a {
+  font-size: 1.5em; }
+
 #login-container {
   margin-top: 25px; }
 

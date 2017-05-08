@@ -23,17 +23,30 @@ FbAPI.firebaseCredentials().then((keys) => {
 
     FbAPI.getMovie(movieTitle).then((results) =>{
       	console.log("Movie API results:", results);
-		FbAPI.writeSearchedMovieToDom(results);
+      	let thisUser = FbAPI.credentialsCurrentUser();
+		FbAPI.writeSearchedMovieToDom(apiKeys, thisUser.uid, results);
     }).catch((error) => {
       console.log("getMovie Error", error);
     });
   });
 
+
+  // there's a <Watched> set of radio buttons on the Movie Cards ...
+  // need to decide whether to keep those (or modify those)
+  // or the version you added
+  // and delete the other
+  // When I pushed up my code and resolved the merge conflict, 
+  // I left both versions out there
   $('.searched-movie-container').on('click', '#watched-movie-btn', () => {
   	console.log("watched!");
   	$('#rating').toggleClass('disabled');
   }); 
 
+
+  // there are radio buttons on the Movie Cards showing Rating ... 
+  // need to decide whether to keep the radio buttons
+  // or the dropdown
+  // and delete the other
   $('.searched-movie-container').on('click', '.dropdown-item', (e) => {
   	let userRating = e.target.innerHTML;
   	$('#rating').html('My Rating ' + userRating);
@@ -45,38 +58,6 @@ $("#find-movies-link").click(() => {
 
 });
 
-
-
-// I don't think you need any of this here ... 
-// The clearLogin() is being done in the User Logon functions
-// This link becomes active when the user logs in;
-// The login-container has already been hidden upon login
-// ALL these classes are being set either to /hide/ or /active/ 
-//   on <log on> and <log off> ; doesn't need to happen here
-//
-// You already have the user's id bc they're logged in
-// let thisUser = FbAPI.credentialsCurrentUser();
-// let thisUserID = thisUser.uid;
-$("#search-movies-link").click(() => {
-
-	// don't need these...
-	// let email = $('#input-email').val();
-	// let password = $('#input-password').val();
-	// firebase.loginUser(user).then((response) => {
-		// clearLogin();
-		// $("#login-container").addClass('hide');
-		// $("#login-logout-link").removeClass('active');
-
-		// $('main-container').removeClass('hide');
-		
-		// $(".search-container").removeClass("hide");
-		// $("#search-movies-link").addClass('active');
-		// firebase.createLogoutButton(apiKeys);
-
-	// }).catch((error) => {
-	// 	console.log("error in loginUser", error);
-	// });
-});
 
 
 //***********************************************************
@@ -94,11 +75,11 @@ $('#register-button').click(() => {
 	let user = {email, password}; 
 
 	FbAPI.registerUser(user).then((response) => {
-// console.log("register response", response);
+
 		let newUser = {
 			uid: response.uid
 		};
-// console.log("newUser :: ", newUser);
+
 		FbAPI.addUser(apiKeys, newUser).then((response) => {
 			clearLogin();
 			$('#login-container').addClass('hide');
@@ -149,7 +130,7 @@ let clearLogin = () => {
 
 // event handler for <Login-Register-Logout> link
 $('#login-logout-link').click(() => {
-// (console.log("logging out // loggedIn :: ", loggedIn));
+
 	if (!loggedIn) {
 		// then user is registering and/or logging in
 		let email = $('#input-email').val();
@@ -162,6 +143,7 @@ $('#login-logout-link').click(() => {
 // if (user === null) {
 // 	console.log("user = null // Register user");
 // }
+// alternate attempt
 // let thisUser = FbAPI.credentialsCurrentUser();
 // console.log("thisUser :: ", thisUser);
 // FbAPI.logoutUser(thisUser.email, thisUser.uid);	
