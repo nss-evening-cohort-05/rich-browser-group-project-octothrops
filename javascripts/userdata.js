@@ -30,7 +30,10 @@ var FbAPI = ((oldFirebase) => {
 				Object.keys(response).forEach((key) => {
 					response[key].id = key;
 					users.push(response[key]);
+
 				});
+console.log("users :: ", users);
+console.log("users[0] :: ", users[0]);
 				resolve(users[0]);
 
 			}).fail((error) => {
