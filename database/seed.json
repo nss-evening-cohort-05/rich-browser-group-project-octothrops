@@ -3,15 +3,14 @@
     "movie0" : {
       "watchedMovie" : true,
       "Title" : "Back to the Future",
-      "Rated" : "PG",
-      "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
+      "Genre": "Adventure, Comedy, Sci-Fi",
+      "Plot": "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
+      "Year" : "1985"
     },
     "movie1" : {
       "watchedMovie" : true,
       "Title" : "School of Rock",
-      "Rated" : "PG-13",
-      "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
-
+      "Rated" : "PG-13"
     },
     "movie2" : {
       "watchedMovie" : false,
