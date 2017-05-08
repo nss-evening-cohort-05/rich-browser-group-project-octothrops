@@ -144,6 +144,12 @@ $('#login-logout-link').click(() => {
 		let password = $('#input-password').val();
 
 		let user = {email, password};
+
+// let authUser = firebase.auth().user;
+// console.log("authUser :: ", authUser);
+// if (user === null) {
+// 	console.log("user = null // Register user");
+// }
 // let thisUser = FbAPI.credentialsCurrentUser();
 // console.log("thisUser :: ", thisUser);
 // FbAPI.logoutUser(thisUser.email, thisUser.uid);	

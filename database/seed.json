@@ -18,6 +18,48 @@
       "Title" : "Clerks",
       "Rated" : "R",
       "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
+    },
+    "movie3" : {
+      "watchedMovie" : false,
+      "Title" : "Casablanca",
+      "Rated" : "PG",
+      "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
+    },
+    "movie4" : {
+      "watchedMovie" : false,
+      "Title" : "Fargo",
+      "Rated" : "R",
+      "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
+    },
+    "movie5" : {
+      "watchedMovie" : false,
+      "Title" : "Hidden Figures",
+      "Rated" : "PG",
+      "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
+    },
+    "movie6" : {
+      "watchedMovie" : false,
+      "Title" : "Trainspotting",
+      "Rated" : "R",
+      "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
+    },
+    "movie7" : {
+      "watchedMovie" : true,
+      "Title" : "Homeward Bound: The Incredible Journey",
+      "Rated" : "G",
+      "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
+    },
+    "movie8" : {
+      "watchedMovie" : true,
+      "Title" : "The Silence of the Lambs",
+      "Rated" : "R",
+      "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
+    },
+    "movie9" : {
+      "watchedMovie" : false,
+      "Title" : "Stand and Deliver",
+      "Rated" : "PG",
+      "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     }
   }
 }
