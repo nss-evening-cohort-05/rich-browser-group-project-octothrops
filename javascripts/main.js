@@ -32,6 +32,11 @@ FbAPI.firebaseCredentials().then((keys) => {
   $('.searched-movie-container').on('click', '#watched-movie-btn', () => {
   	console.log("watched!");
   	$('#rating').toggleClass('disabled');
+  }); 
+
+  $('.searched-movie-container').on('click', '.dropdown-item', (e) => {
+  	let userRating = e.target.innerHTML;
+  	$('#rating').html('My Rating ' + userRating);
   });
 
 

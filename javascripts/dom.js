@@ -49,11 +49,11 @@ var FbAPI = ((domStuff) => {
             searchedMovieString += `<div class="dropdown">`;
             searchedMovieString += `<button class="btn btn-secondary dropdown-toggle disabled" type="button" id="rating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Rate It!</button>`;
             searchedMovieString += `<div class="dropdown-menu" aria-labelledby="dropdownMenu2">`;
-            searchedMovieString += `<button class="dropdown-item" type="button">1<//button>`;
-            searchedMovieString += `<button class="dropdown-item" type="button">2<//button>`;
-            searchedMovieString += `<button class="dropdown-item" type="button">3<//button>`;
-            searchedMovieString += `<button class="dropdown-item" type="button">4<//button>`;
-            searchedMovieString += `<button class="dropdown-item" type="button">5<//button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">1</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">2</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">3</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">4</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">5</button>`;
 
 
             searchedMovieString += `</div></div></div></div></div>`;
