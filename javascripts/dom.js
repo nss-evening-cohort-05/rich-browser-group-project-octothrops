@@ -20,6 +20,7 @@ var FbAPI = ((domStuff) => {
             searchedMovieString += `<h3 class="panel-title">${movie.Title}</h3>`;
             searchedMovieString += `</div>`;
             searchedMovieString += `<div class="panel-body">`;
+
             searchedMovieString += `<h5><span class="movieSpan">Release Date: </span>${movie.Year}</h5>`;
             searchedMovieString += `<h5><span class="movieSpan">Genre: </span>${movie.Genre}</h5>`;
             
@@ -68,6 +69,20 @@ watchedMovie = true;
             searchedMovieString += `</div>`;
             
             searchedMovieString += `</div></div></div>`;
+        
+            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="watched-movie-btn" value="option2">Seen it!</label>`;
+            searchedMovieString += `</div>`;
+            searchedMovieString += `<div class="dropdown">`;
+            searchedMovieString += `<button class="btn btn-secondary dropdown-toggle disabled" type="button" id="rating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Rate It!</button>`;
+            searchedMovieString += `<div class="dropdown-menu" aria-labelledby="dropdownMenu2">`;
+            searchedMovieString += `<button class="dropdown-item" type="button">1</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">2</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">3</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">4</button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">5</button>`;
+
+
+            searchedMovieString += `</div></div></div></div></div>`;
 
     	//});
 
