@@ -33,10 +33,10 @@ var FbAPI = ((domStuff) => {
 
             searchedMovieString += `<p class="movieDesc">${movie.Plot}</p>`; 
 
-            // watched movie?
+// watched movie?
             searchedMovieString += `<div class="form-check">`;
             searchedMovieString += `<label class="form-check-label">`;
-            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Want to see it!</label>`;
+            searchedMovieString += `<input class="form-check-input watchedFlag" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Want to see it!</label>`;
             searchedMovieString += `</div>`;
 
             searchedMovieString += `<div class="form-check">`;
@@ -50,25 +50,27 @@ let watchedMovie = thisUser.watchedMovie; // getWatched()
 // watchedMovie = true;
 console.log("watchedMovie :: ", watchedMovie);
             if (watchedMovie) {
-                searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked> Seen it!</label>`;
+                searchedMovieString += `<input class="form-check-input watchedFlag" type="radio" name="exampleRadios" id="watchedFlag1" value="option0" checked> Seen it!</label>`;
             } else {
-                searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"> Seen it!</label>`;
+                searchedMovieString += `<input class="form-check-input watchedFlag" type="radio" name="exampleRadios" id="watchedFlag2" value="option1"> Seen it!</label>`;
             }
             searchedMovieString += `</div>`;
 // if <watched>
 // GET from firebase record the rating, and check that button
 // POST to firebase any changes made here
             // user Rating
+// these buttons should be enabled only if <movie.watchedMovie> = true
+// otherwise, disabled
             if (watchedMovie) {
                 searchedMovieString += `<h5><span class="movieSpan">Rating: </span>`;
             }
-            searchedMovieString += `<div class="form-check">`;
+            searchedMovieString += `<div id="ratingsFlag" class="form-check">`;
             searchedMovieString += `<label class="form-check-label">`;
-            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 1</label>`;
-            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 2</label>`;
-            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 3</label>`;
-            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 4</label>`;
-            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 5</label>`;
+            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="ratingsFlag0" value="option0"> 1</label>`;
+            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="ratingsFlag1" value="option1"> 2</label>`;
+            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="ratingsFlag2" value="option2"> 3</label>`;
+            searchedMovieString += `<input class="form-check-input " type="radio" name="exampleRadios" id="ratingsFlag3" value="option3"> 4</label>`;
+            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="ratingsFlag4" value="option4"> 5</label>`;
             searchedMovieString += `</div>`;
             
             searchedMovieString += `</div></div></div>`;

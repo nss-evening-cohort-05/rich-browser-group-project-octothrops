@@ -37,10 +37,20 @@ FbAPI.firebaseCredentials().then((keys) => {
   // and delete the other
   // When I pushed up my code and resolved the merge conflict, 
   // I left both versions out there
-  $('.searched-movie-container').on('click', '#watched-movie-btn', () => {
+  $('.searched-movie-container').on('click', '.watched-movie-btn', () => {
   	console.log("watched!");
   	$('#rating').toggleClass('disabled');
   }); 
+  // OR, this ::
+  // watching the radio buttons on the Movie Card
+  $('.searched-movie-container').on('click', '.watchedFlag', () => { 
+  		console.log("watched flags ...");
+  		// if clicks Seen It!, enable the Ratings buttons
+  });
+
+  $('.searched-movie-container').on('click', '#ratingsFlag', () => {
+  	console.log("user can click a movie rating");
+  });
 
 
   // there are radio buttons on the Movie Cards showing Rating ... 
