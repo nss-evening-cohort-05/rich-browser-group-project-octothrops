@@ -23,7 +23,7 @@ FbAPI.firebaseCredentials().then((keys) => {
 
     FbAPI.getMovie(movieTitle).then((results) =>{
       	console.log("Movie API results:", results);
-		FbAPI.writeSearchedMovieToDom(apiKeys);
+		FbAPI.writeSearchedMovieToDom(results);
     }).catch((error) => {
       console.log("getMovie Error", error);
     });

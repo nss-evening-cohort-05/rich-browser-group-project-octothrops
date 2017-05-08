@@ -13,7 +13,8 @@ var FbAPI = (function (movieCall) {
 					response[key].id = key;
 					movies.push(response[key]);
 				});
-				resolve(movies);
+				resolve(data);
+				console.log(movies);
 			})
 			.fail((error) => {
 				reject(error);
