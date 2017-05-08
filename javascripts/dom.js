@@ -21,7 +21,6 @@ var FbAPI = ((domStuff) => {
             searchedMovieString += `</div>`;
             searchedMovieString += `<div class="panel-body">`;
             searchedMovieString += `<h5>${movie.Year}</h5>`;
-            searchedMovieString += `<h5>${movie.Genre}</h5>`;
             searchedMovieString += `<table>`;
             searchedMovieString += `<tr>`;
             for (var i = 0; i < actorArray.length; i++) {      
@@ -31,7 +30,7 @@ var FbAPI = ((domStuff) => {
                 searchedMovieString += `</ul>`;
                 
                 searchedMovieString += `</td>`;
-                if ((i + 1) % 3 === 0) {
+                if ((i + 1) % 2 === 0) {
                 searchedMovieString += `</tr>`;
                 searchedMovieString += `<tr>`;
                 }
@@ -39,16 +38,25 @@ var FbAPI = ((domStuff) => {
             searchedMovieString += `</tr>`;
             searchedMovieString += `</ul>`;
             searchedMovieString += `</table>`;
-            searchedMovieString += `<p>${movie.Plot}</p>`; 
             searchedMovieString += `<div class="form-check">`;
             searchedMovieString += `<label class="form-check-label">`;
             searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">Want to see it!</label>`;
             searchedMovieString += `</div>`;
             searchedMovieString += `<div class="form-check">`;
             searchedMovieString += `<label class="form-check-label">`;
-            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Seen it!</label>`;
+            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="watched-movie-btn" value="option2">Seen it!</label>`;
             searchedMovieString += `</div>`;
-            searchedMovieString += `</div></div></div>`;
+            searchedMovieString += `<div class="dropdown">`;
+            searchedMovieString += `<button class="btn btn-secondary dropdown-toggle disabled" type="button" id="rating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Rate It!</button>`;
+            searchedMovieString += `<div class="dropdown-menu" aria-labelledby="dropdownMenu2">`;
+            searchedMovieString += `<button class="dropdown-item" type="button">1<//button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">2<//button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">3<//button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">4<//button>`;
+            searchedMovieString += `<button class="dropdown-item" type="button">5<//button>`;
+
+
+            searchedMovieString += `</div></div></div></div></div>`;
 
     	//});
 
