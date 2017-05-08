@@ -29,6 +29,11 @@ FbAPI.firebaseCredentials().then((keys) => {
     });
   });
 
+  $('.searched-movie-container').on('click', '#watched-movie-btn', () => {
+  	console.log("watched!");
+  	$('#rating').toggleClass('disabled');
+  });
+
 
 
 $("#find-movies-link").click(() => {
