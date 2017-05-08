@@ -1,14 +1,31 @@
 body {
-  color: blue; }
+  background-size: cover;
+  background-image: url("/images/redCurtainsBackground2.jpeg");
+  font: 100% "PT Sans", sans-serif;
+  color: slategray; }
 
-.input-holder {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-  .input-holder input {
+#login-container {
+  margin-top: 25px; }
+
+.search-container {
+  margin-top: 80px; }
+  .search-container #getMovie {
+    margin-top: 25px; }
+  .search-container .input-holder input {
     background-color: #ffffd3; }
 
 .searched-movie-container {
-  margin-top: 80px; }
-
-.searched-movie-container ul {
-  list-style-type: none; }
+  margin-top: 120px;
+  padding-top: 25px; }
+  .searched-movie-container .panel-heading {
+    background-color: #ffffd3; }
+  .searched-movie-container .panel-title {
+    font-size: 2em;
+    font-weight: 900; }
+  .searched-movie-container .movieSpan {
+    color: blue;
+    font-weight: 500; }
+  .searched-movie-container .movieDesc {
+    margin-top: 10px; }
+  .searched-movie-container .watchedRating {
+    margin-left: 20px; }

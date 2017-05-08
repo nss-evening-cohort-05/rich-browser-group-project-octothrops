@@ -5,21 +5,26 @@
       "Title" : "Back to the Future",
       "Genre": "Adventure, Comedy, Sci-Fi",
       "Plot": "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
-      "Year" : "1985"
+      "Year" : "1985",
+      "Rated" : "5",
+      "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     },
     "movie1" : {
       "watchedMovie" : true,
       "Title" : "School of Rock",
       "Genre" : "Comedy | Family | Music",
       "Plot": "After being kicked out of a rock band, Dewey Finn becomes a substitute teacher of a strict elementary private school, only to try and turn it into a rock band.",
-      "Rated" : "PG-13"
+      "Year" : "2003",
+      "Rated" : "4",
+      "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     },
     "movie2" : {
       "watchedMovie" : false,
       "Title" : "Clerks",
       "Genre" : "Comedy", 
       "Plot" : "A day in the lives of two convenience clerks named Dante and Randal as they annoy customers, discuss movies, and play hockey on the store roof.",
-      "Rated" : "R",
+      "Year" : "1994",
+      "Rated" : "",
       "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     },
     "movie3" : {
@@ -27,7 +32,8 @@
       "Title" : "Casablanca",
       "Genre" : "Drama | Romance | War",
       "Plot" : "In Casablanca in December 1941, a cynical American expatriate encounters a former lover, with unforeseen complications.",
-      "Rated" : "PG",
+      "Year" : "1942",
+      "Rated" : "",
       "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
     },
     "movie4" : {
@@ -35,7 +41,8 @@
       "Title" : "Fargo",
       "Genre" : "Crime | Drama | Thriller",
       "Plot" : "Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.",
-      "Rated" : "R",
+      "Year" : "1996",
+      "Rated" : "",
       "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
     },
     "movie5" : {
@@ -43,7 +50,8 @@
       "Title" : "Hidden Figures",
       "Genre" : "Biography | Drama | History", 
       "Plot" : "The story of a team of African-American women mathematicians who served a vital role in NASA during the early years of the US space program.",
-      "Rated" : "PG",
+      "Year" : "2016",
+      "Rated" : "",
       "uid" : "zNDBO4xRh6OF3HLHGWbaCaxna6E2"
     },
     "movie6" : {
@@ -51,7 +59,8 @@
       "Title" : "Trainspotting",
       "Genre" : "Drama",
       "Plot" : "Renton, deeply immersed in the Edinburgh drug scene, tries to clean up and get out, despite the allure of the drugs and influence of friends.",
-      "Rated" : "R",
+      "Year" : "1996",
+      "Rated" : "",
       "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     },
     "movie7" : {
@@ -59,7 +68,8 @@
       "Title" : "Homeward Bound: The Incredible Journey",
       "Genre" : "Adventure | Comedy | Drama | Family",
       "Plot" : "Three pets escape from a California ranch to find their owners in San Francisco.",
-      "Rated" : "G",
+      "Year" : "1993",
+      "Rated" : "5",
       "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     },
     "movie8" : {
@@ -67,7 +77,8 @@
       "Title" : "The Silence of the Lambs",
       "Genre" : "Crime | Drama | Thriller",
       "Plot" : "A young F.B.I. cadet must confide in an incarcerated and manipulative killer to receive his help on catching another serial killer who skins his victims.",
-      "Rated" : "R",
+      "Year" : "1991",
+      "Rated" : "5",
       "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     },
     "movie9" : {
@@ -75,7 +86,8 @@
       "Title" : "Stand and Deliver",
       "Genre" : "Drama",
       "Plot" : "The story of Jaime Escalante, a high school teacher who successfully inspired his dropout prone students to learn calculus.",
-      "Rated" : "PG",
+      "Year" : "1988",
+      "Rated" : "",
       "uid" : "qbteGRk2rpduP3PQMNWQ0S3BEBl2"
     }
   }

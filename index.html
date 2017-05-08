@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Movie History</title>
   <!-- Third Party Styles -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="./styles/main.css">
   <!-- Personal Styles -->
@@ -37,6 +38,17 @@
   </nav>
 
 
+  <!-- User Register + Log On Block -->
+  <div class="container col-xs-4 col-xs-offset-4" id="login-container">
+    <h3 class="text-center form-spacing">Movie History</h3>
+    <input type="email" id="input-email" class="form-control form-spacing" placeholder="Email Address" required autofocus>
+    <input type="password" id="input-password" class="form-control form-spacing" placeholder="Password" required>
+    <button class="btn btn-lg btn-success col-xs-6" id="login-button">Login</button>  
+    <button class="btn btn-lg btn-primary col-xs-6" id="register-button">Register</button>    
+  </div>
+
+
+  <!-- Movie Search Fields -->
   <div class="search-container hide">
     <div class="input-holder input-group col-xs-4 col-xs-offset-4">
       <input type="text" class="form-control" placeholder="Search Movie" id="movieSearch">
@@ -47,16 +59,9 @@
     </div>
   </div>
 
+
+  <!-- DOM Output Goes Here -->
   <div class="searched-movie-container"></div>
-  <div class="container col-xs-4 col-xs-offset-4" id="login-container">
-    <h3 class="text-center form-spacing">Movie History</h3>
-    <input type="email" id="input-email" class="form-control form-spacing" placeholder="Email Address" required autofocus>
-    <input type="password" id="input-password" class="form-control form-spacing" placeholder="Password" required>
-    <button class="btn btn-lg btn-success col-xs-6" id="login-button">Login</button>  
-    <button class="btn btn-lg btn-primary col-xs-6" id="register-button">Register</button>    
-  </div>
-
-
 
 
   <!-- Third Party Scripts -->
