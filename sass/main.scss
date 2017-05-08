@@ -1,27 +1,74 @@
 @import 'colors';
+@import 'fonts';
 
 body {
-  color: $blue;
+	background-size: cover;
+	background-image: url("/images/redCurtainsBackground2.jpeg");
+	font: 100% $font-stack;
+  	color: $slategray;
 }
 
 
-.input-holder {
-	margin-top: 20px;
-	margin-bottom: 20px;
+//*******************************************
+// Login Block
+//*******************************************
+#login-container {
+	margin-top: 25px;
+}
 
-	input {
+
+
+//*******************************************
+// Movie Search Fields
+//*******************************************
+.search-container {
+	margin-top: 80px;
+
+	#getMovie {
+		margin-top: 25px;
+	}
+
+	.input-holder {
+
+		input {
+			background-color: $lightyellow;
+		}
+	}
+}
+
+
+//*******************************************
+// DOM Output
+//*******************************************
+.searched-movie-container {
+
+	.panel-heading {
 		background-color: $lightyellow;
 	}
 
-}
+	.panel-title {
+		font-size: 2em;
+		font-weight: 900;
+	}
 
-.searched-movie-container {
-	margin-top: 80px;
-}
+	.movieSpan {
+		color: $blue;
+		font-weight: 500;
+	}
 
+	margin-top: 120px;
+	padding-top: 25px;
 
-.searched-movie-container {
-	ul {
-		list-style-type: none; 
+	.movieDesc {
+		margin-top: 10px;
+	}
+
+	.watchedRating {
+		margin-left: 20px;
 	}
 }
+
+
+
+
+

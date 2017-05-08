@@ -20,34 +20,53 @@ var FbAPI = ((domStuff) => {
             searchedMovieString += `<h3 class="panel-title">${movie.Title}</h3>`;
             searchedMovieString += `</div>`;
             searchedMovieString += `<div class="panel-body">`;
-            searchedMovieString += `<h5>${movie.Year}</h5>`;
-            searchedMovieString += `<h5>${movie.Genre}</h5>`;
-            searchedMovieString += `<table>`;
-            searchedMovieString += `<tr>`;
-            for (var i = 0; i < actorArray.length; i++) {      
-                searchedMovieString += `<td>`;
-                searchedMovieString += `<ul>`;
-                searchedMovieString += `<h5><li>${actorArray[i]}</li></h5>`;
-                searchedMovieString += `</ul>`;
-                
-                searchedMovieString += `</td>`;
-                if ((i + 1) % 3 === 0) {
-                searchedMovieString += `</tr>`;
-                searchedMovieString += `<tr>`;
-                }
+            searchedMovieString += `<h5><span class="movieSpan">Release Date: </span>${movie.Year}</h5>`;
+            searchedMovieString += `<h5><span class="movieSpan">Genre: </span>${movie.Genre}</h5>`;
+            
+            searchedMovieString += `<h5><span class="movieSpan starring">Starring: </span>`;
+            searchedMovieString += `<span="actorList">${actorArray[0]}`;
+            for (var i = 1; i < actorArray.length; i++) {    
+                searchedMovieString += `, ${actorArray[i]}`;
             }
-            searchedMovieString += `</tr>`;
-            searchedMovieString += `</ul>`;
-            searchedMovieString += `</table>`;
-            searchedMovieString += `<p>${movie.Plot}</p>`; 
+            searchedMovieString += `</span></br>`;
+
+            searchedMovieString += `<p class="movieDesc">${movie.Plot}</p>`; 
+
+            // watched movie?
             searchedMovieString += `<div class="form-check">`;
             searchedMovieString += `<label class="form-check-label">`;
-            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">Want to see it!</label>`;
+            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Want to see it!</label>`;
             searchedMovieString += `</div>`;
+
             searchedMovieString += `<div class="form-check">`;
             searchedMovieString += `<label class="form-check-label">`;
-            searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Seen it!</label>`;
+let watchedMovie; // getWatched()
+// GET from firebase record, if user has watched movie
+// POST to firebase record if user posts a change here
+watchedMovie = true;
+// console.log("movie.watchedMovie :: ", `${movie.watchedMovie}`);
+            if (watchedMovie) {
+                searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked> Seen it!</label>`;
+            } else {
+                searchedMovieString += `<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"> Seen it!</label>`;
+            }
             searchedMovieString += `</div>`;
+// if <watched>
+// GET from firebase record the rating, and check that button
+// POST to firebase any changes made here
+            // user Rating
+            if (watchedMovie) {
+                searchedMovieString += `<h5><span class="movieSpan">Rating: </span>`;
+            }
+            searchedMovieString += `<div class="form-check">`;
+            searchedMovieString += `<label class="form-check-label">`;
+            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 1</label>`;
+            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 2</label>`;
+            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 3</label>`;
+            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 4</label>`;
+            searchedMovieString += `<input class="form-check-input watchedRating" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> 5</label>`;
+            searchedMovieString += `</div>`;
+            
             searchedMovieString += `</div></div></div>`;
 
     	//});
