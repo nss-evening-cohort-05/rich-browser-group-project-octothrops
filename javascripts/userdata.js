@@ -17,7 +17,7 @@ var FbAPI = ((oldFirebase) => {
 	};
 
 	oldFirebase.getUser = (keys, uid) => {
-
+console.log("getting user // uid :: ", uid);
 		let users = [];
 
 		return new Promise ((resolve, reject) => {
